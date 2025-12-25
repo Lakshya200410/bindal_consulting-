@@ -1,4 +1,41 @@
-export const dynamic = "force-dynamic";
+"use client";
+
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import Section from "../components/Section";
+import Footer from "../components/Footer";
+
+export default function Home() {
+  return (
+    <>
+      <Navbar />
+      <Hero />
+
+      {/* About */}
+      <Section id="about" title="About Bindal Consulting">
+        ...
+      </Section>
+
+      {/* Why Us */}
+      <Section id="why" title="Why Bindal Consulting?" light>
+        ...
+      </Section>
+
+      {/* Base Approach */}
+      <Section id="base" title="Base Approach – 6 Months" light>
+        ...
+      </Section>
+
+      {/* Results */}
+      <Section id="results" title="Expected Results">
+        ...
+      </Section>
+
+      <Footer />
+    </>
+  );
+}
+
 
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
