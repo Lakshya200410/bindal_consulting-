@@ -1,0 +1,4 @@
+{
+  "framework": "nextjs",
+  "installCommand": "npm install next@latest --save-exact && npm install"
+}
