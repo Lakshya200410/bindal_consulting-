@@ -9,22 +9,44 @@ export default function Home() {
       <Navbar />
       <Hero />
 
-      <Section id="about" title="About Bindal Consulting">
-        Founded by a Mechanical Engineer with 28+ years of experience across
+      <Section id="about" title="About Bindal Consulting" center>
+        Founded by a Mechanical Engineer with <strong>28+ years</strong> of experience across
         Automotive, Steel, Industrial Valve and Manufacturing industries.
-        Leadership roles include COO, Business Excellence Manager, TPM Leader and
-        Six Sigma Expert. Delivered ₹20 Cr savings, 21% manpower optimisation and
-        turned negative bottom lines into +5% profitability.
+        <br /><br />
+        Proven leadership roles including COO, Business Excellence Manager and Six Sigma Expert,
+        delivering <strong>₹20 Cr savings</strong> and converting negative bottom lines into profitability.
       </Section>
 
-      <Section id="why" title="Why Bindal Consulting?" light>
-        <ul>
-          <li>Customized TPM, Lean & Six Sigma methodology</li>
-          <li>Hands-on strategy creation and execution</li>
-          <li>Experience with blue & white collar workforce</li>
-          <li>Exposure across Indian and European teams</li>
-          <li><strong>No Improvement, No Payment</strong></li>
-        </ul>
+
+      <Section id="why" title="Why Bindal Consulting?" light center>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+          gap: "30px",
+          marginTop: "40px"
+        }}>
+          {[
+            "Customized TPM, Lean & Six Sigma methodology",
+            "Hands-on strategy creation and execution",
+            "Experience with blue & white collar workforce",
+            "Exposure to Indian & European teams",
+            "No Improvement, No Payment"
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring" }}
+              style={{
+                padding: "30px",
+                background: "white",
+                borderRadius: "14px",
+                boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+              }}
+            >
+              {item}
+            </motion.div>
+          ))}
+        </div>
       </Section>
 
       <Section id="excellence" title="Operational Excellence">
@@ -32,16 +54,35 @@ export default function Home() {
         effort and resources, resulting in an improved bottom line.
       </Section>
 
-      <Section id="base" title="Base Approach – 6 Months" light>
-        <h4>People</h4>
-        <p>Skill mapping, training calendar, KPI setup, daily review meetings.</p>
-        <h4>Process</h4>
-        <p>As-is mapping, gap identification, elimination of non-value-added steps.</p>
-        <h4>Machine</h4>
-        <p>Preventive maintenance, breakdown analysis, autonomous maintenance.</p>
-        <h4>Material</h4>
-        <p>Supplier quality analysis, inventory monitoring and control.</p>
+      <Section id="base" title="Base Approach – 6 Months" light center>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+          gap: "30px"
+        }}>
+          {[
+            { title: "People", text: "Skill mapping, KPI setup, training calendar, daily reviews" },
+            { title: "Process", text: "As-is mapping, gap identification, elimination of NVA steps" },
+            { title: "Machine", text: "Preventive maintenance, breakdown analysis, autonomy" },
+            { title: "Material", text: "Supplier quality, inventory monitoring & control" }
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ scale: 1.04 }}
+              style={{
+                padding: "28px",
+                borderRadius: "16px",
+                background: "white",
+                boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
+              }}
+            >
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </motion.div>
+          ))}
+        </div>
       </Section>
+
 
       <Section id="advance" title="Advance Approach – 18 Months">
         Value stream mapping, digitisation of information flow, predictive

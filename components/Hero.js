@@ -3,24 +3,42 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section style={{ padding: "140px 60px", background: "#0b2c4d", color: "white" }}>
-      <motion.h1
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
+    <section
+      style={{
+        padding: "120px 60px",
+        display: "grid",
+        gridTemplateColumns: "1.2fr 1fr",
+        gap: "60px",
+        alignItems: "center",
+        background: "#0b2c4d",
+        color: "white",
+      }}
+    >
+      <motion.div
+        initial={{ opacity: 0, x: -60 }}
+        animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        style={{ fontSize: "56px", maxWidth: "800px" }}
       >
-        Improved Bottom Line through Operational Excellence
-      </motion.h1>
+        <h1 style={{ fontSize: "54px", lineHeight: "1.2" }}>
+          Improved Bottom Line<br />Through Operational Excellence
+        </h1>
 
-      <motion.p
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        style={{ fontSize: "20px", maxWidth: "650px", marginTop: "20px" }}
-      >
-        Helping MSMEs scale sustainably using TPM, Lean and Six Sigma frameworks
-      </motion.p>
+        <p style={{ fontSize: "20px", marginTop: "25px", maxWidth: "520px" }}>
+          Helping MSMEs achieve sustainable profitability using Lean, TPM and Six Sigma frameworks.
+        </p>
+      </motion.div>
+
+      <motion.img
+        src="https://images.unsplash.com/photo-1581090700227-1e37b190418e"
+        alt="Operational Excellence"
+        initial={{ opacity: 0, x: 60 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        style={{
+          width: "100%",
+          borderRadius: "16px",
+        }}
+      />
     </section>
   );
 }
