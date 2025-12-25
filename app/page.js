@@ -89,18 +89,43 @@ export default function Home() {
         maintenance, SMED, supplier benchmarking and logistics cost optimisation.
       </Section>
 
-      <Section id="results" title="Expected Results" light>
-        <ul>
-          <li>50–90% reduction in Quality PPM</li>
-          <li>85–93% on-time delivery</li>
-          <li>10–21% productivity improvement</li>
-          <li>0.5–1.5% cost saving on revenue</li>
-          <li>20–40% improvement in inventory turns</li>
-        </ul>
+      <Section id="results" title="Expected Results" center>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+          gap: "30px",
+          marginTop: "40px"
+      }}>
+        {[
+          "50–90% Reduction in Quality PPM",
+          "85–93% On-time Delivery",
+          "10–21% Productivity Improvement",
+          "0.5–1.5% Cost Savings",
+          "20–40% Inventory Turn Improvement"
+        ].map((item, i) => (
+          <motion.div
+            key={i}
+            whileHover={{ y: -10 }}
+            style={{
+              padding: "35px",
+              borderRadius: "18px",
+              background: "#0b2c4d",
+              color: "white",
+              fontSize: "18px",
+            }}
+          >
+            {item}
+          </motion.div>
+          ))}
+        </div>
       </Section>
 
-      <Section id="contact" title="Contact">
-        Email: contact@bindalconsulting.in
+
+      <Section id="contact" title="Let’s Improve Your Bottom Line" center>
+        <p style={{ fontSize: "20px" }}>
+          Email us at <strong>contact@bindalconsulting.in</strong><br />
+          and start your Operational Excellence journey.
+        </p>
       </Section>
 
       <Footer />
