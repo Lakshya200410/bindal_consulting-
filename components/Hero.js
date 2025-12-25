@@ -10,7 +10,7 @@ export default function Hero() {
         gridTemplateColumns: "1.2fr 1fr",
         gap: "60px",
         alignItems: "center",
-        background: "#0b2c4d",
+        background: "linear-gradient(135deg, red, orange)",
         color: "white",
       }}
     >
